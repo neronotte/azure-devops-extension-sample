@@ -1,0 +1,41 @@
+{
+	"manifestVersion": 1,
+	"id": "neronotte_first_extension",
+	"name": "My First Extension",
+	"publisher": "neronotte",
+	"version": "0.0.3",
+	"description": "<description>",
+	"public": false,
+	"categories": ["Azure Repos"],
+	"targets": [
+		{
+			"id": "Microsoft.VisualStudio.Services"
+		}
+	],
+	"demands": ["api-version/3.0"],
+	"scopes": [],
+	"icons": {
+		"default": "static/images/logo.png"
+	},
+	"contributions": [
+		{
+			"id": "home-page",
+			"type": "ms.vss-web.hub",
+			"targets": ["ms.vss-work-web.work-hub-group"],
+			"properties": {
+				"name": "My first extension",
+				"uri": "dist/home/home.html"
+			}
+		}
+	],
+	"files": [
+		{
+			"path": "dist",
+			"addressable": true
+		},
+		{
+			"path": "static",
+			"addressable": true
+		}
+	]
+}
